@@ -15,7 +15,7 @@ strl.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
 # Adding a pick list so users can pick the fruit they want to include
-strl.multiselect(fruit_list)
+strl.multiselect("Pick some fruits: ", list(fruit_list.index))
 
 # Pulling the above imported data into a dataframe
 strl.dataframe(fruit_list)
