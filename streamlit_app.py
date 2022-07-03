@@ -18,8 +18,9 @@ fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/
 fruit_list = fruit_list.set_index('Fruit')
 
 # Adding a pick list so users can pick the fruit they want to include; pre-selected some fruits as an example
-strl.multiselect("Pick some fruits: ", list(fruit_list.index),['Avocado', 'Strawberries'])
+fruits_selected = strl.multiselect("Pick some fruits: ", list(fruit_list.index),['Avocado', 'Strawberries'])
+fruits_to_show = fruit_list.loc[fruits_selected]
 
 # Pulling the above imported data into a dataframe; display table on app
-strl.dataframe(fruit_list)
+strl.dataframe(fruit_to_show)
 
