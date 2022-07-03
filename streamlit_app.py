@@ -22,5 +22,5 @@ fruits_selected = strl.multiselect("Pick some fruits: ", list(fruit_list.index),
 fruits_to_show = fruit_list.loc[fruits_selected]
 
 # Pulling the above imported data into a dataframe; display table on app
-strl.dataframe(fruit_to_show)
+strl.dataframe(fruits_to_show)
 
